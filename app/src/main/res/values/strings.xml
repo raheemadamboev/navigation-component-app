@@ -21,4 +21,8 @@
 
     <!-- Terms and Conditions Fragment -->
     <string name="terms_and_conditions">Terms &amp; Conditions</string>
+
+    <!-- Search Fragment -->
+    <string name="search_fragment">Search Fragment</string>
+    <string name="search">Search</string>
 </resources>

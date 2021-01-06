@@ -68,4 +68,9 @@
         android:name="xyz.teamgravity.navigationcomponent.fragment.TermsFragment"
         android:label="fragment_terms"
         tools:layout="@layout/fragment_terms" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="xyz.teamgravity.navigationcomponent.fragment.SearchFragment"
+        android:label="@string/search"
+        tools:layout="@layout/fragment_search" />
 </navigation>

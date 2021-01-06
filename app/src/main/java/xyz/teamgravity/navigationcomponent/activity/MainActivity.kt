@@ -3,12 +3,15 @@ package xyz.teamgravity.navigationcomponent.activity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.onNavDestinationSelected
 import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import xyz.teamgravity.navigationcomponent.NavGraphDirections
 import xyz.teamgravity.navigationcomponent.R
 import xyz.teamgravity.navigationcomponent.databinding.ActivityMainBinding
@@ -18,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     private lateinit var navController: NavController
+    private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,8 +32,23 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.findNavController()
 
+        // hide back button from top level fragments
+        appBarConfiguration = AppBarConfiguration(setOf(R.id.homeFragment, R.id.searchFragment))
+
         setSupportActionBar(binding.toolbar)
-        setupActionBarWithNavController(navController)
+        setupActionBarWithNavController(navController, appBarConfiguration)
+
+        binding.bottomNavigation.setupWithNavController(navController)
+
+        // hide bottom navigation
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            when(destination.id) {
+                R.id.termsFragment, R.id.settingsFragment ->
+                    binding.bottomNavigation.visibility = View.GONE
+                else ->
+                    binding.bottomNavigation.visibility = View.VISIBLE
+            }
+        }
     }
 
     // in order to respond back button in toolbar from fragment
