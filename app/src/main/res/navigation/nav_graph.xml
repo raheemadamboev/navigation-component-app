@@ -5,6 +5,14 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/homeFragment">
 
+    <action
+        android:id="@+id/action_global_termsFragment"
+        app:destination="@id/termsFragment"
+        app:enterAnim="@anim/slide_in_top"
+        app:exitAnim="@anim/slide_out_bottom"
+        app:popEnterAnim="@anim/slide_in_bottom"
+        app:popExitAnim="@anim/slide_out_bottom" />
+
     <fragment
         android:id="@+id/homeFragment"
         android:name="xyz.teamgravity.navigationcomponent.fragment.HomeFragment"
@@ -50,4 +58,14 @@
             app:popUpTo="@id/homeFragment"
             app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="xyz.teamgravity.navigationcomponent.fragment.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/termsFragment"
+        android:name="xyz.teamgravity.navigationcomponent.fragment.TermsFragment"
+        android:label="fragment_terms"
+        tools:layout="@layout/fragment_terms" />
 </navigation>

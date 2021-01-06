@@ -17,4 +17,8 @@
 
     <!-- Settings Fragment -->
     <string name="settings_fragment">Settings Fragment</string>
+    <string name="settings">Settings</string>
+
+    <!-- Terms and Conditions Fragment -->
+    <string name="terms_and_conditions">Terms &amp; Conditions</string>
 </resources>
