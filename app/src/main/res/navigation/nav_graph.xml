@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="xyz.teamgravity.navigationcomponent.fragment.HomeFragment"
-        android:label="fragment_home"
+        android:label="@string/home"
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_loginFragment"
@@ -21,7 +21,7 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="xyz.teamgravity.navigationcomponent.fragment.LoginFragment"
-        android:label="fragment_login"
+        android:label="@string/login"
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_welcomeFragment"
@@ -34,7 +34,7 @@
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="xyz.teamgravity.navigationcomponent.fragment.WelcomeFragment"
-        android:label="fragment_welcome"
+        android:label="{username}"
         tools:layout="@layout/fragment_welcome" >
         <argument
             android:name="username"

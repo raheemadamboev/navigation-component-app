@@ -4,6 +4,7 @@
     <!-- Home Fragment -->
     <string name="home_fragment">Home Fragment</string>
     <string name="login">Login</string>
+    <string name="home">Home</string>
 
     <!-- Login Fragment -->
     <string name="username">Username</string>
@@ -13,4 +14,7 @@
     <!-- Welcome Fragment -->
     <string name="successfully_logged_in">Successfully logged in</string>
     <string name="ok">OK</string>
+
+    <!-- Settings Fragment -->
+    <string name="settings_fragment">Settings Fragment</string>
 </resources>
