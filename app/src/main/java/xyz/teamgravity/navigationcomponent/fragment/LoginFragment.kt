@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import xyz.teamgravity.navigationcomponent.databinding.FragmentLoginBinding
 
 class LoginFragment: Fragment() {
@@ -16,6 +17,20 @@ class LoginFragment: Fragment() {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
 
         return binding.root
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        binding.apply {
+            confirmB.setOnClickListener {
+                val username = usernameField.text.toString()
+                val password = passwordField.text.toString()
+
+                val action = LoginFragmentDirections.actionLoginFragmentToWelcomeFragment(username, password)
+                findNavController().navigate(action)
+            }
+        }
     }
 
     override fun onDestroyView() {
