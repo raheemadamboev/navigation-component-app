@@ -1,0 +1,11 @@
+- Navigating safe way in fragments
+- Animation in navigating fragments
+- Safe Args - safe way to send arguments in fragments
+- Pop backstack
+- Finding navigation controller in activity
+- Connecting toolbar with navigation controller
+- Adding menu & handling menu
+- Global actions
+- Bottom navigation view with navigation controller
+- Navigation drawer with navigation controller
+- Deep links, get data from url
