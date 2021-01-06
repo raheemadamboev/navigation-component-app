@@ -28,6 +28,7 @@ class LoginFragment: Fragment() {
         binding.apply {
             usernameField.setText(args.username)
 
+            // confirm button
             confirmB.setOnClickListener {
                 val username = usernameField.text.toString()
                 val password = passwordField.text.toString()
