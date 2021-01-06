@@ -74,7 +74,7 @@
     <fragment
         android:id="@+id/termsFragment"
         android:name="xyz.teamgravity.navigationcomponent.fragment.TermsFragment"
-        android:label="fragment_terms"
+        android:label="@string/terms_and_conditions"
         tools:layout="@layout/fragment_terms" />
     <fragment
         android:id="@+id/searchFragment"

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">NavigationComponent</string>
+    <string name="app_name">Navigation Component</string>
 
     <!-- Home Fragment -->
     <string name="home_fragment">Home Fragment</string>
