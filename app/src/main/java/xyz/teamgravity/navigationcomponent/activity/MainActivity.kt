@@ -8,10 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.onNavDestinationSelected
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
+import androidx.navigation.ui.*
 import xyz.teamgravity.navigationcomponent.NavGraphDirections
 import xyz.teamgravity.navigationcomponent.R
 import xyz.teamgravity.navigationcomponent.databinding.ActivityMainBinding
@@ -33,12 +30,13 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.findNavController()
 
         // hide back button from top level fragments
-        appBarConfiguration = AppBarConfiguration(setOf(R.id.homeFragment, R.id.searchFragment))
+        appBarConfiguration = AppBarConfiguration(setOf(R.id.homeFragment, R.id.searchFragment), binding.drawerLayout)
 
         setSupportActionBar(binding.toolbar)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         binding.bottomNavigation.setupWithNavController(navController)
+        binding.navigationDrawer.setupWithNavController(navController)
 
         // hide bottom navigation
         navController.addOnDestinationChangedListener { _, destination, _ ->
@@ -53,7 +51,7 @@ class MainActivity : AppCompatActivity() {
 
     // in order to respond back button in toolbar from fragment
     override fun onSupportNavigateUp(): Boolean {
-        return navController.navigateUp() || super.onSupportNavigateUp()
+        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
