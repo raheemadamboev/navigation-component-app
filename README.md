@@ -7,16 +7,14 @@ Simple app with Jetpack Navigation Component
 
 This is just simple and plain app to show what Jetpack Navigation Component can do. It can make working with fragments fun, easy and safe without writing boilerplate code.
 
-<img src="https://i.imgur.com/PtV2jGf.jpg" alt="Italian Trulli" width="200" height="200">
-
 **Screenshots:**
 
-<img src="https://i.imgur.com/vF98LjQ.jpg" alt="Italian Trulli" width="200" height="434"> <img src="https://i.imgur.com/RdMikwI.jpg" alt="Italian Trulli" width="200" height="434"> <img src="https://i.imgur.com/dxinAqr.jpg" alt="Italian Trulli" width="200" height="434"> <img src="https://i.imgur.com/mw0vteO.jpg" alt="Italian Trulli" width="200" height="434">
+<img src="https://github.com/raheemadamboev/navigation-component-app/blob/master/Jetpack%20Navigation%20Component.jpg" alt="Italian Trulli" width="869" height="416">
 
-**Key points:**
+**Tech stack:**
 
 - Material Design
-- View binding
+- ViewBinding
 - Jetpack Navigation Component
 - Safe Args
 - Deep links
