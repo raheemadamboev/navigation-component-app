@@ -1,5 +1,5 @@
 # navigation-component-app
-Simple app with Jetpack Navigation Component
+Simple app with Jetpack Navigation Component 
 
 **Navigation Component**
 
